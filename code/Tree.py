@@ -60,7 +60,8 @@ def watch_video(driver, video_url):
         if duration:
             # Watch 60% of the video
             time_to_watch = duration * 0.6
-            if time_to_watch >
+            if time_to_watch > 600:
+                duration = 600
             time.sleep(time_to_watch)
 
             # Pause the video after watching
